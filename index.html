@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoes collections</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+  body{
+  font-family: "Lato", sans-serif;
+  transition: background-color .5s;
+  color: black;
+}
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+-----------------------
+body {
+  background-color: black;
+  font-family: cursive;
+}
+
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+  font-family: cursive;
+  font-size: 60px;
+  font-color:black
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px black, 0 0 20px black, 0 0 30px sandybrown, 0 0 40px sandybrown, 0 0 50px sandybrown, 0 0 60px sandybrown, 0 0 70 sandybrown;
+  }
+  
+  to {
+    text-shadow: 0 0 20px black, 0 0 30px sandybrown, 0 0 40px sandybrown, 0 0 50px sandybrown, 0 0 60px sandybrown, 0 0 70px sandybrown, 0 0 80px  sandybrown;
+  }
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.col-2 img{
+    max-width: 100%;
+    padding: 50px 0;
+} 
+
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+.btn{
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding:8px 30px;
+    margin: 30px 0px;
+    border-radius: 30px;
+    transition:background 0.5s;
+}
+/* CSS Variables */
+:root{
+    --headers: #202125;
+    --background:  #4d4d4d;
+    --grey: #858585;
+    --lightgrey: #d2d2d2;
+    --shadow: 0 1px 5px rgba(0, 0, 0, 0.473);
+    --hover: 0 3px 10px rgba(0, 0, 0, 0.205);
+}
+
+body{
+    background-color: var(background);
+    background: url(NMD-Black-Cover.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: top;
+    background-origin: border-box;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn{
+    background-color: var(lightgrey);
+    font-family: 'Roboto Mono', monospace;
+    color: black;
+    height: 30px;
+    width: 90px;
+    border-radius: 5px;
+    border: none;
+    margin: 0px 10px 10px 10px;
+    transition-duration: 0.4s;
+}
+
+.btn:hover{
+    box-shadow: var(shadow);
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+h3{
+    font-family: 'Roboto Mono', monospace;
+    color: var(headers);
+    margin: 0px 325px 0px 325px;
+    padding: 20px 0px;
+}
+
+/* NAVIGATION */
+.logo {
+	width: 75px;
+	display: inline-block;
+}
+
+.navbar {
+    text-align: center;
+    height: 80px;
+    text-decoration: none;
+    color: #fff;
+}
+
+ul{
+    text-decoration: none;
+    color: #fff;
+    padding: 0;
+}
+
+li{
+    display: inline-block;
+    margin: 1rem;
+}
+
+li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+li a:hover{
+    color: var(grey);
+}
+
+/* BANNER */
+.banner{
+    position: 0px;
+    min-height: 475px;
+    text-align: center;
+}
+
+.banner h1{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 42px;
+    font-weight: 300;
+    color: #fff;
+    padding: 30px 0;
+}
+
+/* BACKGROUND */
+.background-container{
+    margin: 0;
+    padding: 0;
+    background-color: var(background);
+}
+
+/* PRODUCTS */
+.product-container{
+    margin-left: 23%;
+    margin-right: 23%;
+    display:grid;
+    grid-template-columns: 350px 350px;
+    grid-row: auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.card{
+    background-color: var(grey);
+    min-height: 350px;
+    width: 350px;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: var(shadow);
+}
+
+.shoe-img{
+    border-radius: 5px;
+}
+
+.card h4{
+    margin: 20px 10px 15px 15px;
+}
+
+.card .btn{
+    margin: 0px 0px 10px 15px;
+}
+
+.product1{
+    background: url(Airmax-90.jpg);
+    min-height: 250px;
+}
+
+.product2{
+    background: url(Ultraboost.jpg);
+    min-height: 250px;
+}
+
+.product3{
+    background: url(Airmax-97.jpg);
+    min-height: 250px;
+}
+
+.product4{
+    background: url(NMD-R1.jpg);
+    min-height: 250px;
+}
+
+/* ABOUT */
+.about{
+    min-height: 200px;
+    margin: 50px 0px 50px 0px;
+    padding: 25px 50px;
+    background-color: var(lightgrey);
+    text-align: center;
+}
+
+.about h2{
+    font-size: 32px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.about p{
+    font-size: 20px;
+}
+
+/* Contact form */
+.contact-form{
+    margin: auto;
+    padding: 10px 50px;
+    min-width: 750px;
+    min-height: 325px;
+    box-sizing: border-box;
+}
+
+.contact-form h3{
+    font-size: 24px;
+    color: var(headers);
+    margin-left: 0px;
+}
+
+.contact-form input{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    padding-left: 5px;
+    margin: 5px 0px 10px 0px;
+    width: 100%;
+    height: 2rem;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-form #message{
+    height: 100px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    padding: 5px;
+    width: 100%;
+    resize: none;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-form .submit-form{
+    width: 100%;
+    float: right;
+}
+
+/* Footer */
+footer{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    margin-top: 50px;
+    overflow: hidden;
+    background-color: var(grey);
+}
+
+footer p{
+    font-family: 'Roboto Mono', monospace;
+    color: var(lightgrey);
+    font-size: 14px;
+    padding: 25px;
+}
+
+/* Media Queries */
+@media(max-width:1050px){
+    h3{
+        margin: 0px 0px 0px 50px;
+        padding: 20px 0px;
+    }
+    .product-container{
+        display: inline;
+        gap: 10px;
+        margin: auto;
+    }
+    .card{
+        margin-bottom: 10px;
+    }
+}
+
+@media(max-width:800px){
+    .contact-form{
+        min-width: 500px;
+    }
+    .contact-form h3{
+        font-size: 20px;
+        margin-right: 0px;
+    }
+}
+
+@media(max-width:700px){
+    h3{
+        margin: 0px 0px 0px 50px;
+        padding: 20px 0px;
+    }
+    .banner h1{
+        font-size: 36px;
+    }
+}
+
+@media(max-width:600px){
+    body{
+        background: url(NMD-Black-600.png);
+        background-size: auto;
+        background-position: top;
+    }
+    .logo {
+        width: 75px;
+        display: block;
+        margin: auto;
+    }
+    li{
+        display: block;
+        margin: 1rem;
+    }
+    .banner h1{
+        margin-top: 100px;
+        font-size: 36px;
+    }
+    .contact-form{
+        min-width: 300px;
+    }
+    .about h2{
+        font-size: 24px;
+    }
+    .about p{
+        font-size: 18px;
+    }
+    footer p{
+        font-size: 12px;
+    }
+}
+      
+      
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="good">
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Menu</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Message</a>
+        <a href="#">Payment</a>
+
+      </div>
+      
+      <div id="main">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+      </div>
+      
+      <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+        document.body.style.backgroundColor = "white";
+      }
+      </script>
+      </div>
+      <div class="glow">
+        fashion shoes Mart
+        </div>
+        <div class="row">
+          <div class="col-2">
+              <h1 style="font-family: ;cursive">Give your Workout <br>A New Style!</h1>
+              <p style="font-family:cursive;">Success isn't always about greatness. It's about consistency. Consistent<br>hard work gains success. Greatness will come.</p>
+              <a href="products.html" class="btn">Explore Now</a>
+          </div>
+          <div class="col-2"> 
+          </div>
+      </div>
+      <div class="banner">
+        <br><br><br><br>
+        <h1>Great Shoes At Great Prices.</h1>
+    </div>
+
+    <div class="background-container">
+
+    <!-- Products -->
+    <h3 id="products">PRODUCTS</h3>
+    <div class="product-container">
+        <div class="card">
+            <div class="shoe-img product1"></div>
+            <h4>Lorem, ipsum dolor.</h4>
+            <button class="btn">Buy Now</button>
+        </div>
+        <div class="card">
+            <div class="shoe-img product2"></div>
+            <h4>Lorem, ipsum dolor.</h4>
+            <button class="btn">Buy Now</button>
+        </div>
+        <div class="card">
+            <div class="shoe-img product3"></div>
+            <h4>Lorem, ipsum dolor.</h4>
+            <button class="btn">Buy Now</button>
+        </div>
+        <div class="card">
+            <div class="shoe-img product4"></div>
+            <h4>Lorem, ipsum dolor.</h4>
+            <button class="btn">Buy Now</button>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="about">
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere deserunt fugiat culpa ipsam! Temporibus fugiat suscipit placeat odio tempora inventore odit ipsa error minus officia consectetur voluptatem dolorem, vero alias ipsum debitis ullam quia adipisci quisquam nostrum rerum vitae. Illo minima debitis optio libero voluptates officia saepe ducimus ex tempora!</p>
+    </div>
+
+    <!-- Contact form -->
+    <div id="contact" class="card contact-form">
+        <h3>Contact Us</h3>
+        <form action="/action_page.php">
+            <input type="email" name="email" placeholder="abdurrahman@email.com">
+            <textarea id="message" name="text" placeholder="Enter Message here..."></textarea>
+            <button class="btn submit-form" type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>stylish Shoes - A website by Abdur Rahman</p>
+    </footer>
+
+</div>
+
+            
+</body>
+</html>
